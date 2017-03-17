@@ -1,3 +1,6 @@
+body{
+	background: url(../images/bg.jpg) repeat;
+}
 .navbar-inverse {
    background: rgba(62, 59, 232, 1);
   border-bottom: none;
@@ -71,4 +74,15 @@ div.kotak p {
 
 p.tengah{
 	vertical-align: middle;
+	color: white;
+	text-align: center;
+}
+
+h1,h2,h3,h4,h5,h6.web{
+	color: white;
+}
+
+hr.style1{
+	padding: 4px;
+	color: grey;
 }
