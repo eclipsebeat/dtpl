@@ -86,3 +86,7 @@ hr.style1{
 	padding: 4px;
 	color: grey;
 }
+img.center {
+    display: block;
+    margin: 0 auto;
+}
