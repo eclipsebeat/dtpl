@@ -60,7 +60,13 @@
 
 			
 			<!-- Nulis Code Mulai dibawah baris ini -->
-
+			<div class="container-fluid">
+				<div class="row">
+					<h3 style="text-align: center;">Hasil Polling</h3>
+					<div col-md-12><canvas id="myChart" width="250" height="250"></canvas></div>
+					
+				</div>
+			</div>
 
 		</div>
 
@@ -68,7 +74,46 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="../../aset/js/vendor/jquery.min.js"><\/script>')</script>
 		<script src="/aset/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 		<script src="../../aset/js/ie10-viewport-bug-workaround.js"></script>
+		<script>
+			var ctx = document.getElementById("myChart");
+			var myChart = new Chart(ctx, {
+			    type: 'bar',
+			    data: {
+			        labels: ["La la Land", "Moonlight", "Arrival", "Zootopia", "Lainnya"],
+			        datasets: [{
+			            label: '# of Votes',
+			            data: [190, 130, 120, 75, 150],
+			            backgroundColor: [
+			                'rgba(255, 99, 132, 0.2)',
+			                'rgba(54, 162, 235, 0.2)',
+			                'rgba(255, 206, 86, 0.2)',
+			                'rgba(75, 192, 192, 0.2)',
+			                'rgba(153, 102, 255, 0.2)'
+			            ],
+			            borderColor: [
+			                'rgba(255,99,132,1)',
+			                'rgba(54, 162, 235, 1)',
+			                'rgba(255, 206, 86, 1)',
+			                'rgba(75, 192, 192, 1)',
+			                'rgba(153, 102, 255, 1)'
+			            ],
+			            borderWidth: 1
+			        }]
+			    },
+			    options: {
+			        scales: {
+			            yAxes: [{
+			                ticks: {
+			                    beginAtZero:true
+			                }
+			            }]
+			        }
+			    }
+			});
+			</script>
 	</body>
 	</html>
